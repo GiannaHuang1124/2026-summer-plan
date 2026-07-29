@@ -16,6 +16,7 @@
     --social:#8D6E3A; --social-t:#F1E9D6;
     --chin:#C23B5E; --chin-t:#F8E3E9;
     --eng:#6B5CA5;  --eng-t:#ECE7F5;
+    --civ:#5B4FBF; --civ-t:#E9E6F9;
     --review:#8A8578; --review-t:#EFEDE6;
   }
   @media (prefers-color-scheme: dark){
@@ -30,6 +31,7 @@
       --social:#D9B573; --social-t:rgba(217,181,115,.20);
       --chin:#EF87A2; --chin-t:rgba(194,59,94,.18);
       --eng:#B0A0DE;  --eng-t:rgba(107,92,165,.20);
+      --civ:#9C90E8; --civ-t:rgba(91,79,191,.20);
       --review:#B7B2A4; --review-t:rgba(138,133,120,.20);
     }
   }
@@ -44,6 +46,7 @@
     --social:#D9B573; --social-t:rgba(217,181,115,.20);
     --chin:#EF87A2; --chin-t:rgba(194,59,94,.18);
     --eng:#B0A0DE;  --eng-t:rgba(107,92,165,.20);
+    --civ:#9C90E8; --civ-t:rgba(91,79,191,.20);
     --review:#B7B2A4; --review-t:rgba(138,133,120,.20);
   }
   :root[data-theme="light"]{
@@ -57,6 +60,7 @@
     --social:#8D6E3A; --social-t:#F1E9D6;
     --chin:#C23B5E; --chin-t:#F8E3E9;
     --eng:#6B5CA5;  --eng-t:#ECE7F5;
+    --civ:#5B4FBF; --civ-t:#E9E6F9;
     --review:#8A8578; --review-t:#EFEDE6;
   }
 
@@ -177,7 +181,7 @@
 <div class="wrap">
   <div class="eyebrow">Summer Prep · 2026.07.29 – 2026.08.30</div>
   <h1>國二暑假預習計畫</h1>
-  <p class="sub">數學・理化・歷史・地理・國文，平日上午/下午各 2 小時；週六日完全不排新進度，留作緩衝與休息。</p>
+  <p class="sub">數學・理化・歷史・地理・國文・公民，平日以上午/下午各 2 小時為主，部分日子加一段約45分鐘的加碼小時段；週六日完全不排新進度，留作緩衝與休息。</p>
 
   <div class="sync-badge"><span class="sync-dot" id="syncDot"></span><span id="syncText">連線中…</span></div>
 
@@ -210,18 +214,18 @@
   <details class="callout">
     <summary>使用說明與注意事項</summary>
     <div class="callout-body">
-      <p><b>版本說明：</b>國文為翰林版（8上第1–4課：田園之秋選／古詩選／下雨天真好／愛蓮說），數學為康軒版（8上共5章：乘法公式與多項式、平方根與畢氏定理、因式分解、一元二次方程式、統計資料處理，全部排入），歷史／地理為康軒版（8上第三冊：歷史單元二「中國與東亞（上）」6課、地理單元一「區域特色」6課）。以上課次名稱與影片皆已對照真實資源確認。</p>
+      <p><b>版本說明：</b>國文為翰林版（8上第1–4課：田園之秋選／古詩選／下雨天真好／愛蓮說），數學為康軒版（8上共5章：乘法公式與多項式、平方根與畢氏定理、因式分解、一元二次方程式、統計資料處理，全部排入），歷史／地理為康軒版（8上第三冊：歷史單元二「中國與東亞（上）」6課、地理單元一「區域特色」6課），公民為康軒版（8上第三冊「法律與生活」6課：法律與社會規範／憲法與基本權利／民法／刑法／行政法規／權利救濟與少事法）。公民影片來自「公民叮」頻道，這些法律主題內容全國統一、不分課本版本，頻道上沒有特別標示康軒或8上/8下字樣，但主題與課本完全對應。以上課次名稱與影片皆已對照真實資源確認。</p>
       <p><b>理化時間計算：</b>每段影片時間 × 1.5 倍＝含寫題目的總時數（例如 46 分鐘影片＝69 分鐘總時段），已依此排入下方每個時段。</p>
       <p><b>週末：</b>週六、日完全不排新進度，作為緩衝日，可用來補齊平日落後的部分、整理錯題本，或單純休息。</p>
       <p><b>英文：</b>週一、四晚間 5 點後為英文課時段，本計畫完全不排課；平日進度依補習班安排即可，不額外占用平日讀書時段。</p>
       <p><b>作文：</b>每週二下午 2–5 點為作文課，本計畫已將週二下午時段改排至 17:00–19:00。</p>
-      <p><b>歷史／地理：</b>因單元內容較彈性，兩科合併為同一「社會」時段一起進行，前半段看歷史、後半段看地理即可。</p>
+      <p><b>歷史／地理／公民：</b>三科皆已各自獨立成單一時段（不再合併），部分平日因此新增一個約45分鐘的加碼小時段（例如16:00–16:45或19:00–19:45），方便各科分開追蹤進度；週六日仍完全空白不受影響。</p>
       <p><b>推薦頻道：</b>
         <a href="https://www.youtube.com/@ogiwu" target="_blank" rel="noopener">宜蓉的歷史課</a>、
-        <a href="https://www.youtube.com/@knshgeo" target="_blank" rel="noopener">康軒國中社會地理頻道</a>、
-        國文主要使用出版社官方頻道 <a href="https://www.youtube.com/@HLJCH" target="_blank" rel="noopener">翰林國中國文</a>（逐課錄製，對應版本保證正確），第1課另附 <a href="https://www.junyiacademy.org" target="_blank" rel="noopener">均一教育平台</a> 練習題。
+        <a href="https://www.youtube.com/channel/UCwdllSTkPRnKyWyCZ54bpkA" target="_blank" rel="noopener">翻轉地理教室</a>、
+        國文主要使用出版社官方頻道 <a href="https://www.youtube.com/@HLJCH" target="_blank" rel="noopener">翰林國中國文</a>（逐課錄製，對應版本保證正確），第1課另附 <a href="https://www.junyiacademy.org" target="_blank" rel="noopener">均一教育平台</a> 練習題；公民使用 <a href="https://www.youtube.com/@gongmingding" target="_blank" rel="noopener">公民叮：教學影片分享平台</a>。
       </p>
-      <p>打勾進度儲存在此瀏覽器裝置中，換裝置或清除瀏覽器資料會重置。</p>
+      <p>打勾進度已同步至雲端資料庫，家長與小孩用各自裝置打開同一網址即可看到同一份進度。</p>
     </div>
   </details>
 
@@ -249,8 +253,10 @@ try{
 var SUBJ = {
   math:{label:'數學', color:'var(--math)', tint:'var(--math-t)'},
   phys:{label:'理化', color:'var(--phys)', tint:'var(--phys-t)'},
-  social:{label:'社會', color:'var(--social)', tint:'var(--social-t)'},
+  hist:{label:'歷史', color:'var(--hist)', tint:'var(--hist-t)'},
+  geo:{label:'地理', color:'var(--geo)', tint:'var(--geo-t)'},
   chin:{label:'國文', color:'var(--chin)', tint:'var(--chin-t)'},
+  civ:{label:'公民', color:'var(--civ)', tint:'var(--civ-t)'},
   review:{label:'複習/緩衝', color:'var(--review)', tint:'var(--review-t)'}
 };
 
@@ -259,7 +265,8 @@ var WEEKEND_NOTE = {t:'週末緩衝', s:'review', ti:'週末不排新進度', no
 var SCHEDULE = [
 {d:'2026-07-29', b:[
   {t:'09:00–11:00', s:'math', ti:'數學 1-2｜多項式與其加減運算', note:'1-1乘法公式已完成，直接接續。基礎概念＋加減運算法則'},
-  {t:'14:00–16:00', s:'social', ti:'社會｜歷史第1課 商周至隋唐的國家與社會＋地理第1課 中國的自然環境', note:'歷史為「宜蓉的歷史課」播放清單，地理為康軒官方地理頻道播放清單，兩者皆對應完整課次（各自還有數集可接續）', links:[{label:'歷史：從封建到郡縣', url:'https://www.youtube.com/watch?v=cYSyHDqq8a4&list=PL-oHJmlmfN2wQt8Tmjbt6-vtyTU88_WGb&index=1'},{label:'地理：中國的自然環境', url:'https://www.youtube.com/watch?v=fCZKHBUlZxM&list=PL_Hz3_-6p-ZsWgwcr161hogz0jvQh6i5D'}]}
+  {t:'14:00–16:00', s:'hist', ti:'歷史 第1課｜商周至隋唐的國家與社會', note:'「宜蓉的歷史課」播放清單第1集，本課共2集（另有歷代選拔人才制度）', link:'https://www.youtube.com/watch?v=cYSyHDqq8a4&list=PL-oHJmlmfN2wQt8Tmjbt6-vtyTU88_WGb&index=1'},
+  {t:'16:00–16:45', s:'geo', ti:'地理 第1課｜中國的位置與地形', note:'「翻轉地理教室－陪你讀地理（國二康軒版）」，本課另有L1-2中國氣候與傳統維生方式可接續', link:'https://www.youtube.com/watch?v=nc4G8lI77yY&list=PLCd-_Kosc5pCmiAjgwGFWopFvHMaq01YP&index=1'}
 ]},
 {d:'2026-07-30', b:[
   {t:'09:00–11:00', s:'phys', ti:'理化 B3C2｜空氣＋歷屆會考解析', note:'影片約96分＋練習約48分，可分兩段進行', link:'https://youtu.be/ujNU9HoXCTo'},
@@ -277,7 +284,8 @@ var SCHEDULE = [
 ]},
 {d:'2026-08-04', b:[
   {t:'09:00–11:00', s:'phys', ti:'理化 B3C3-4＋歷屆｜多變的聲音＋歷屆會考解析', link:'https://youtu.be/TJ2VwVVt-Z8'},
-  {t:'17:00–19:00', s:'social', ti:'社會｜歷史第2課 商周至隋唐的民族與文化＋地理第2課 中國的人口', note:'今天下午2–5點作文課，已改排傍晚時段。歷史本課實際共4集（另有草原民族農業民族、文化交流之佛教、中國文化的對外傳播），時間夠可接續看完', links:[{label:'歷史：魏晉南北朝的民族融合', url:'https://www.youtube.com/watch?v=TKAVBxVyo_k&list=PL-oHJmlmfN2wQt8Tmjbt6-vtyTU88_WGb&index=4'},{label:'地理：中國的人口成長與文化遷移', url:'https://www.youtube.com/watch?v=t9fyBw5XGjE&list=PL_Hz3_-6p-Zv0qzwViLccZDwaqB3-aFh8'}]}
+  {t:'17:00–19:00', s:'hist', ti:'歷史 第2課｜商周至隋唐的民族與文化', note:'今天下午2–5點作文課，已改排傍晚時段。本課共4集（另有草原民族農業民族、文化交流之佛教、中國文化的對外傳播），時間夠可接續看完', link:'https://www.youtube.com/watch?v=TKAVBxVyo_k&list=PL-oHJmlmfN2wQt8Tmjbt6-vtyTU88_WGb&index=4'},
+  {t:'19:00–19:45', s:'geo', ti:'地理 第2課｜中國的人口成長與文化遷移', link:'https://www.youtube.com/watch?v=S18RN-zvCmg&list=PLCd-_Kosc5pCmiAjgwGFWopFvHMaq01YP&index=3'}
 ]},
 {d:'2026-08-05', b:[
   {t:'09:00–11:00', s:'math', ti:'數學 2-1｜平方根與近似值', note:'康軒8上第2章開始'},
@@ -299,11 +307,13 @@ var SCHEDULE = [
 ]},
 {d:'2026-08-11', b:[
   {t:'09:00–11:00', s:'phys', ti:'理化 B3C4-5,6｜光學儀器＋色光與顏色', link:'https://youtu.be/fEZlpWsyZSo'},
-  {t:'17:00–19:00', s:'social', ti:'社會｜歷史第3課 宋元時期的國際互動＋地理第3課 中國的產業與經濟', note:'今天下午作文課，已改排傍晚時段。歷史本課實際共5集（另有靖康之禍、蒙古帝國、宋元貿易與城市生活、宋元學術科技），時間夠可接續看完', links:[{label:'歷史：宋遼的互動／澶淵之盟', url:'https://www.youtube.com/watch?v=cQdzYd_RW3w&list=PL-oHJmlmfN2wQt8Tmjbt6-vtyTU88_WGb&index=7'},{label:'地理：中國的產業發展與地區差異', url:'https://www.youtube.com/watch?v=tGx6ibBpGvc&list=PL_Hz3_-6p-Zt0bwu52S1tBJ2OVT5qL_sX'}]}
+  {t:'17:00–19:00', s:'hist', ti:'歷史 第3課｜宋元時期的國際互動', note:'今天下午作文課，已改排傍晚時段。本課共5集（另有靖康之禍、蒙古帝國、宋元貿易與城市生活、宋元學術科技），時間夠可接續看完', link:'https://www.youtube.com/watch?v=cQdzYd_RW3w&list=PL-oHJmlmfN2wQt8Tmjbt6-vtyTU88_WGb&index=7'},
+  {t:'19:00–19:45', s:'geo', ti:'地理 第3課｜中國的工業發展與區域差異', note:'另有L3-2區域差異與重要都市可接續', link:'https://www.youtube.com/watch?v=_vW48JD2mqY&list=PLCd-_Kosc5pCmiAjgwGFWopFvHMaq01YP&index=4'}
 ]},
 {d:'2026-08-12', b:[
   {t:'09:00–11:00', s:'math', ti:'數學 2-3｜畢氏定理與平面距離'},
-  {t:'14:00–16:00', s:'social', ti:'社會｜歷史第4課 明清帝國與天朝體制＋地理第4課 東北亞的自然環境與文化', note:'歷史本課實際共6集（另有明朝建立與滅亡、大清帝國的統治、鄭和下西洋、明清貿易活動、東西文化交流），時間夠可接續看完', links:[{label:'歷史：天朝體制與朝貢貿易', url:'https://www.youtube.com/watch?v=d1lHjbmWFJA&list=PL-oHJmlmfN2wQt8Tmjbt6-vtyTU88_WGb&index=14'},{label:'地理：東北亞的自然環境', url:'https://www.youtube.com/watch?v=tEtAHSCD7kg&list=PL_Hz3_-6p-ZsVBrzYcrPmjvo7igPyWB2Y'}]}
+  {t:'14:00–16:00', s:'hist', ti:'歷史 第4課｜明清帝國與天朝體制', note:'本課共6集（另有明朝建立與滅亡、大清帝國的統治、鄭和下西洋、明清貿易活動、東西文化交流），時間夠可接續看完', link:'https://www.youtube.com/watch?v=d1lHjbmWFJA&list=PL-oHJmlmfN2wQt8Tmjbt6-vtyTU88_WGb&index=14'},
+  {t:'16:00–16:45', s:'geo', ti:'地理 第4課｜東北亞位置範圍地形', note:'另有L5-1東北亞(季風亞洲)、東北亞氣候、L5-2東北亞環境影響文化特色可接續', link:'https://www.youtube.com/watch?v=3kPViTbpnLs&list=PLCd-_Kosc5pCmiAjgwGFWopFvHMaq01YP&index=7'}
 ]},
 {d:'2026-08-13', b:[
   {t:'09:00–11:00', s:'phys', ti:'理化 B3C4歷屆＋B3C5-1｜歷屆會考解析＋溫度與溫度計', link:'https://youtu.be/5Ri-y0-ASIA'},
@@ -321,7 +331,8 @@ var SCHEDULE = [
 ]},
 {d:'2026-08-18', b:[
   {t:'09:00–11:00', s:'phys', ti:'理化 B3C5-4｜熱對物質的影響', link:'https://youtu.be/UfDhzKoG4x8'},
-  {t:'17:00–19:00', s:'social', ti:'社會｜歷史第5課 西力衝擊下的晚清變革＋地理第5課 東北亞的經濟發展', note:'今天下午作文課，已改排傍晚時段。歷史本課實際共8集（另有中西貿易衝突、英法聯軍、自強運動、甲午戰爭、戊戌變法、義和團、立憲運動），時間夠可接續看完', links:[{label:'歷史：鴉片戰爭與南京條約', url:'https://www.youtube.com/watch?v=z51WD1zjDHw&list=PL-oHJmlmfN2wQt8Tmjbt6-vtyTU88_WGb&index=19'},{label:'地理：東北亞的經濟發展', url:'https://www.youtube.com/watch?v=0Olq8qV-v3M&list=PL_Hz3_-6p-ZsG6PU_tGIS1JCK8qTpcLEn'}]}
+  {t:'17:00–19:00', s:'hist', ti:'歷史 第5課｜西力衝擊下的晚清變革', note:'今天下午作文課，已改排傍晚時段。本課共8集（另有中西貿易衝突、英法聯軍、自強運動、甲午戰爭、戊戌變法、義和團、立憲運動），時間夠可接續看完', link:'https://www.youtube.com/watch?v=z51WD1zjDHw&list=PL-oHJmlmfN2wQt8Tmjbt6-vtyTU88_WGb&index=19'},
+  {t:'19:00–19:45', s:'geo', ti:'地理 第5課｜日本產業（農業與工業）', note:'另有日本文化產業、L6-2朝鮮半島的產業發展可接續', link:'https://www.youtube.com/watch?v=gXAQnXLe9pc&list=PLCd-_Kosc5pCmiAjgwGFWopFvHMaq01YP&index=11'}
 ]},
 {d:'2026-08-19', b:[
   {t:'09:00–11:00', s:'math', ti:'數學 4-1｜一元二次方程式：因式分解法解題'},
@@ -343,19 +354,23 @@ var SCHEDULE = [
 ]},
 {d:'2026-08-25', b:[
   {t:'09:00–11:00', s:'phys', ti:'理化 B3C6-5,6｜分子與化學式＋物質變化的粒子觀點', link:'https://youtu.be/GUKi_Gwec5w'},
-  {t:'17:00–19:00', s:'social', ti:'社會｜歷史第6課 晚清的社會文化變遷（歷史單元總複習）＋地理第6課 東北亞的區域發展與挑戰', note:'今天下午作文課，已改排傍晚時段。地理這課康軒官方頻道查無獨立播放清單，暫連到「東北亞的經濟發展」清單接續看，或請對照課本確認是否已包含在其他課次內', links:[{label:'歷史：晚清社會文化的變遷', url:'https://www.youtube.com/watch?v=Y4BWxSe7mx4&list=PL-oHJmlmfN2wQt8Tmjbt6-vtyTU88_WGb&index=26'},{label:'地理：東北亞的經濟發展（延伸）', url:'https://www.youtube.com/watch?v=0Olq8qV-v3M&list=PL_Hz3_-6p-ZsG6PU_tGIS1JCK8qTpcLEn'}]}
+  {t:'17:00–19:00', s:'hist', ti:'歷史 第6課｜晚清的社會文化變遷（歷史單元總複習）', note:'今天下午作文課，已改排傍晚時段', link:'https://www.youtube.com/watch?v=Y4BWxSe7mx4&list=PL-oHJmlmfN2wQt8Tmjbt6-vtyTU88_WGb&index=26'},
+  {t:'19:00–19:45', s:'geo', ti:'地理 第6課｜東北亞的區域發展與挑戰', note:'「翻轉地理教室」與康軒官方頻道都查無獨立影片，暫連到朝鮮半島產業發展接續看，或請對照課本確認此單元範圍', link:'https://www.youtube.com/watch?v=jBiHuaCUsGs&list=PLCd-_Kosc5pCmiAjgwGFWopFvHMaq01YP&index=14'}
 ]},
 {d:'2026-08-26', b:[
   {t:'09:00–11:00', s:'math', ti:'數學 5-1｜統計資料處理：累積次數分配與相對次數分析'},
-  {t:'14:00–16:00', s:'review', ti:'彈性加碼｜自選較弱科目加強複習', note:'例如理化或數學尚未熟練的單元，也可以提前休息'}
+  {t:'14:00–16:00', s:'civ', ti:'公民 第1課｜法律與社會規範', note:'公民叮頻道，含社會規範種類、法律位階', link:'https://www.youtube.com/watch?v=Rx93mxZVewU'},
+  {t:'16:00–16:45', s:'civ', ti:'公民 第2課｜憲法與基本權利', note:'公民叮頻道，含平等權/自由權/受益權/參政權四大權利系列', link:'https://www.youtube.com/watch?v=g6T8jbHrUeo'}
 ]},
 {d:'2026-08-27', b:[
   {t:'09:00–11:00', s:'phys', ti:'理化 B3C6歷屆｜歷屆會考解析（理化預習全部完成🎉）', link:'https://youtu.be/H1sF3TWaMRw'},
   {t:'14:00–16:00', s:'chin', ti:'國文｜全冊重點總整理', link:'https://www.youtube.com/@HLJCH/videos', note:'翰林國中國文官方頻道，瀏覽本學期全部課次影片'}
 ]},
 {d:'2026-08-28', b:[
-  {t:'09:00–11:00', s:'math', ti:'數學 5-1｜統計資料處理：應用練習＋自修全冊最終確認'},
-  {t:'14:00–16:00', s:'phys', ti:'理化｜B3C2–C6 全範圍總複習測驗'}
+  {t:'09:00–11:00', s:'civ', ti:'公民 第3課｜民法與日常生活', note:'公民叮頻道，行為能力、契約、損害賠償系列', link:'https://www.youtube.com/watch?v=dbSw0IVEKXc'},
+  {t:'11:00–11:45', s:'civ', ti:'公民 第4課｜刑法與犯罪預防', note:'公民叮頻道，罪刑法定、責任能力、刑罰種類系列', link:'https://www.youtube.com/watch?v=SS7PM_itp3c'},
+  {t:'14:00–16:00', s:'civ', ti:'公民 第5課｜行政法規與生活', note:'公民叮頻道，行政處分、行政罰系列', link:'https://www.youtube.com/watch?v=5xyfPquYO68'},
+  {t:'16:00–16:45', s:'civ', ti:'公民 第6課｜權利救濟與少事法', note:'公民叮頻道，少年事件處理法（少年保護事件與少年刑事案件）', link:'https://www.youtube.com/watch?v=s6LiJeJsTXk'}
 ]},
 {d:'2026-08-29', b:[WEEKEND_NOTE]},
 {d:'2026-08-30', b:[
