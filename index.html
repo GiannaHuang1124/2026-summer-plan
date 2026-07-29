@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>暑假預習計畫｜7/29–8/30</title>
+<style>
+  :root{
+    --bg:#F5F3ED; --surface:#FFFFFF; --surface-2:#EBE7DC; --border:#DEDACC;
+    --ink:#20281F; --ink-soft:#5C6656; --accent:#0F6E63; --accent-soft:#DCEEEA;
+    --today-ring:#C1622A; --today-soft:#F6E3D6; --shadow: 0 1px 2px rgba(32,40,31,.06), 0 8px 24px -12px rgba(32,40,31,.18);
+    --math:#3B5BDB; --math-t:#E7EAFB;
+    --phys:#0F9D8C; --phys-t:#DFF3EF;
+    --hist:#B8842A; --hist-t:#F5EBD6;
+    --geo:#3F8F4F;  --geo-t:#E4F1E6;
+    --social:#8D6E3A; --social-t:#F1E9D6;
+    --chin:#C23B5E; --chin-t:#F8E3E9;
+    --eng:#6B5CA5;  --eng-t:#ECE7F5;
+    --review:#8A8578; --review-t:#EFEDE6;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#14181A; --surface:#1D2224; --surface-2:#242A2C; --border:#31383A;
+      --ink:#EDEFEA; --ink-soft:#A9B2AC; --accent:#4FBFAE; --accent-soft:rgba(79,191,174,.15);
+      --today-ring:#E08A52; --today-soft:rgba(224,138,82,.14); --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 28px -12px rgba(0,0,0,.55);
+      --math:#8391F0; --math-t:rgba(59,91,219,.18);
+      --phys:#4FD9C4; --phys-t:rgba(15,157,138,.20);
+      --hist:#E0B15C; --hist-t:rgba(184,132,42,.20);
+      --geo:#7FCB8E;  --geo-t:rgba(63,143,79,.20);
+      --social:#D9B573; --social-t:rgba(217,181,115,.20);
+      --chin:#EF87A2; --chin-t:rgba(194,59,94,.18);
+      --eng:#B0A0DE;  --eng-t:rgba(107,92,165,.20);
+      --review:#B7B2A4; --review-t:rgba(138,133,120,.20);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#14181A; --surface:#1D2224; --surface-2:#242A2C; --border:#31383A;
+    --ink:#EDEFEA; --ink-soft:#A9B2AC; --accent:#4FBFAE; --accent-soft:rgba(79,191,174,.15);
+    --today-ring:#E08A52; --today-soft:rgba(224,138,82,.14); --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 28px -12px rgba(0,0,0,.55);
+    --math:#8391F0; --math-t:rgba(59,91,219,.18);
+    --phys:#4FD9C4; --phys-t:rgba(15,157,138,.20);
+    --hist:#E0B15C; --hist-t:rgba(184,132,42,.20);
+    --geo:#7FCB8E;  --geo-t:rgba(63,143,79,.20);
+    --social:#D9B573; --social-t:rgba(217,181,115,.20);
+    --chin:#EF87A2; --chin-t:rgba(194,59,94,.18);
+    --eng:#B0A0DE;  --eng-t:rgba(107,92,165,.20);
+    --review:#B7B2A4; --review-t:rgba(138,133,120,.20);
+  }
+  :root[data-theme="light"]{
+    --bg:#F5F3ED; --surface:#FFFFFF; --surface-2:#EBE7DC; --border:#DEDACC;
+    --ink:#20281F; --ink-soft:#5C6656; --accent:#0F6E63; --accent-soft:#DCEEEA;
+    --today-ring:#C1622A; --today-soft:#F6E3D6; --shadow: 0 1px 2px rgba(32,40,31,.06), 0 8px 24px -12px rgba(32,40,31,.18);
+    --math:#3B5BDB; --math-t:#E7EAFB;
+    --phys:#0F9D8C; --phys-t:#DFF3EF;
+    --hist:#B8842A; --hist-t:#F5EBD6;
+    --geo:#3F8F4F;  --geo-t:#E4F1E6;
+    --social:#8D6E3A; --social-t:#F1E9D6;
+    --chin:#C23B5E; --chin-t:#F8E3E9;
+    --eng:#6B5CA5;  --eng-t:#ECE7F5;
+    --review:#8A8578; --review-t:#EFEDE6;
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:"PingFang TC","Microsoft JhengHei","Noto Sans TC","Heiti TC",system-ui,sans-serif;
+    line-height:1.5; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:760px; margin:0 auto; padding:28px 18px 64px;}
+  .eyebrow{font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-soft); font-weight:600;}
+  h1{font-size:26px; margin:4px 0 2px; letter-spacing:-.01em; text-wrap:balance;}
+  .sub{color:var(--ink-soft); font-size:14px; margin:0 0 20px;}
+
+  .progress-card{
+    background:var(--surface); border:1px solid var(--border); border-radius:16px;
+    padding:16px 18px; box-shadow:var(--shadow); margin-bottom:18px;
+  }
+  .progress-top{display:flex; justify-content:space-between; align-items:baseline; gap:8px; flex-wrap:wrap;}
+  .progress-top strong{font-size:22px; font-variant-numeric:tabular-nums;}
+  .progress-top span{font-size:12px; color:var(--ink-soft);}
+  .bar{height:8px; border-radius:99px; background:var(--surface-2); margin:10px 0 12px; overflow:hidden;}
+  .bar > i{display:block; height:100%; background:var(--accent); border-radius:99px; transition:width .35s ease;}
+  .chips{display:flex; flex-wrap:wrap; gap:6px;}
+  .chip{
+    font-size:11px; padding:3px 9px; border-radius:99px; font-weight:600;
+    display:flex; align-items:center; gap:5px; font-variant-numeric:tabular-nums;
+  }
+  .chip i{width:6px; height:6px; border-radius:50%; display:inline-block;}
+
+  .tabs{display:flex; gap:6px; margin-bottom:16px;}
+  .tab-btn{
+    flex:1; padding:9px 0; border-radius:10px; border:1px solid var(--border); background:var(--surface);
+    color:var(--ink-soft); font-size:13px; font-weight:600; cursor:pointer; font-family:inherit;
+  }
+  .tab-btn.active{background:var(--accent); border-color:var(--accent); color:var(--surface);}
+  .tab-btn:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+
+  .strip{display:flex; gap:6px; overflow-x:auto; padding:2px 2px 10px; margin-bottom:6px; scrollbar-width:thin;}
+  .strip::-webkit-scrollbar{height:5px;}
+  .strip::-webkit-scrollbar-thumb{background:var(--border); border-radius:99px;}
+  .daychip{
+    flex:0 0 auto; width:46px; text-align:center; padding:6px 0 8px; border-radius:12px;
+    border:1px solid var(--border); background:var(--surface); cursor:pointer; font-family:inherit;
+  }
+  .daychip .dow{font-size:10px; color:var(--ink-soft);}
+  .daychip .num{font-size:15px; font-weight:700; font-variant-numeric:tabular-nums;}
+  .daychip .dot{width:5px; height:5px; border-radius:50%; margin:3px auto 0; background:transparent;}
+  .daychip.done .dot{background:var(--accent);}
+  .daychip.selected{border-color:var(--accent); box-shadow:0 0 0 1.5px var(--accent) inset;}
+  .daychip.istoday{border-color:var(--today-ring); background:var(--today-soft);}
+  .daychip:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+
+  .nav-row{display:flex; align-items:center; gap:8px; margin:2px 0 14px;}
+  .nav-btn{
+    border:1px solid var(--border); background:var(--surface); color:var(--ink); border-radius:9px;
+    width:34px; height:34px; font-size:15px; cursor:pointer; font-family:inherit;
+  }
+  .nav-btn:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+  .today-btn{
+    border:1px solid var(--accent); color:var(--accent); background:transparent; border-radius:9px;
+    padding:0 12px; height:34px; font-size:12px; font-weight:700; cursor:pointer; font-family:inherit;
+  }
+
+  .daycard{background:var(--surface); border:1px solid var(--border); border-radius:18px; box-shadow:var(--shadow); overflow:hidden; margin-bottom:14px;}
+  .daycard.istoday{border-color:var(--today-ring);}
+  .daycard-head{padding:16px 18px 12px; border-bottom:1px solid var(--border); display:flex; align-items:baseline; gap:10px;}
+  .daycard-head .num{font-size:28px; font-weight:800; font-variant-numeric:tabular-nums; letter-spacing:-.02em;}
+  .daycard-head .meta{display:flex; flex-direction:column;}
+  .daycard-head .meta b{font-size:14px;}
+  .daycard-head .meta small{color:var(--ink-soft); font-size:12px;}
+  .todaymark{margin-left:auto; font-size:11px; font-weight:700; color:var(--today-ring); background:var(--today-soft); padding:3px 9px; border-radius:99px;}
+
+  .block{display:flex; gap:12px; padding:14px 18px; border-bottom:1px solid var(--border);}
+  .block:last-child{border-bottom:none;}
+  .block.checked{opacity:.55;}
+  .cb{
+    appearance:none; -webkit-appearance:none; width:22px; height:22px; border-radius:7px; border:2px solid var(--border);
+    background:var(--surface); flex:0 0 auto; margin-top:2px; cursor:pointer; position:relative;
+  }
+  .cb:checked{background:var(--accent); border-color:var(--accent);}
+  .cb:checked::after{content:"✓"; position:absolute; inset:0; display:flex; align-items:center; justify-content:center; color:#fff; font-size:14px; font-weight:700;}
+  .cb:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+  .block-main{flex:1; min-width:0;}
+  .block-top{display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-bottom:4px;}
+  .time{font-size:11px; color:var(--ink-soft); font-variant-numeric:tabular-nums; font-weight:600;}
+  .subj{font-size:11px; font-weight:700; padding:2px 8px; border-radius:99px;}
+  .block-title{font-size:15px; font-weight:700; text-wrap:balance;}
+  .block.checked .block-title{text-decoration:line-through; text-decoration-color:var(--ink-soft);}
+  .block-note{font-size:12.5px; color:var(--ink-soft); margin-top:3px;}
+  .block-link{display:inline-flex; align-items:center; gap:5px; margin-top:7px; font-size:12px; font-weight:700; color:var(--accent); text-decoration:none;}
+  .block-link:hover{text-decoration:underline;}
+  .link-row{display:flex; flex-wrap:wrap; gap:14px;}
+  .link-row .block-link{margin-top:7px;}
+
+  .week-head{font-size:12px; font-weight:700; color:var(--ink-soft); letter-spacing:.06em; margin:22px 0 8px; text-transform:uppercase;}
+  .week-head:first-child{margin-top:0;}
+
+  details.callout{background:var(--surface-2); border:1px solid var(--border); border-radius:14px; padding:2px 16px; margin-top:22px;}
+  details.callout summary{cursor:pointer; padding:12px 0; font-weight:700; font-size:13.5px; list-style:none; display:flex; align-items:center; gap:6px;}
+  details.callout summary::-webkit-details-marker{display:none;}
+  details.callout summary:before{content:"›"; display:inline-block; transition:transform .15s; font-size:16px;}
+  details.callout[open] summary:before{transform:rotate(90deg);}
+  .callout-body{padding-bottom:14px; font-size:13px; color:var(--ink-soft);}
+  .callout-body p{margin:0 0 8px;}
+  .callout-body ul{margin:0 0 8px; padding-left:18px;}
+  .callout-body a{color:var(--accent);}
+
+  .footer-note{text-align:center; font-size:11.5px; color:var(--ink-soft); margin-top:22px;}
+  @media (prefers-reduced-motion: reduce){ .bar > i{transition:none;} }
+  .sync-badge{display:inline-flex; align-items:center; gap:5px; font-size:11px; font-weight:600; color:var(--ink-soft); margin-bottom:14px;}
+  .sync-dot{width:7px; height:7px; border-radius:50%; background:var(--review); transition:background .2s;}
+  .sync-dot.on{background:var(--accent);}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="eyebrow">Summer Prep · 2026.07.29 – 2026.08.30</div>
+  <h1>國二暑假預習計畫</h1>
+  <p class="sub">數學・理化・歷史・地理・國文，平日上午/下午各 2 小時；週六日完全不排新進度，留作緩衝與休息。</p>
+
+  <div class="sync-badge"><span class="sync-dot" id="syncDot"></span><span id="syncText">連線中…</span></div>
+
+  <div class="progress-card">
+    <div class="progress-top">
+      <div><strong id="pPct">0%</strong> <span>已完成進度</span></div>
+      <span id="pCount">0 / 0 個學習時段</span>
+    </div>
+    <div class="bar"><i id="pBar" style="width:0%"></i></div>
+    <div class="chips" id="pChips"></div>
+  </div>
+
+  <div class="tabs">
+    <button class="tab-btn active" id="tabToday" onclick="setView('today')">今日焦點</button>
+    <button class="tab-btn" id="tabAll" onclick="setView('all')">完整總覽</button>
+  </div>
+
+  <div id="viewToday">
+    <div class="strip" id="strip"></div>
+    <div class="nav-row">
+      <button class="nav-btn" onclick="shiftDay(-1)" aria-label="前一天">‹</button>
+      <button class="today-btn" onclick="goToday()">回到今天</button>
+      <button class="nav-btn" onclick="shiftDay(1)" aria-label="後一天">›</button>
+    </div>
+    <div id="dayCardHost"></div>
+  </div>
+
+  <div id="viewAll" style="display:none;"></div>
+
+  <details class="callout">
+    <summary>使用說明與注意事項</summary>
+    <div class="callout-body">
+      <p><b>版本說明：</b>國文為翰林版（8上第1–4課：田園之秋選／古詩選／下雨天真好／愛蓮說），數學為康軒版（8上共5章：乘法公式與多項式、平方根與畢氏定理、因式分解、一元二次方程式、統計資料處理，全部排入），歷史／地理為康軒版（8上第三冊：歷史單元二「中國與東亞（上）」6課、地理單元一「區域特色」6課）。以上課次名稱與影片皆已對照真實資源確認。</p>
+      <p><b>理化時間計算：</b>每段影片時間 × 1.5 倍＝含寫題目的總時數（例如 46 分鐘影片＝69 分鐘總時段），已依此排入下方每個時段。</p>
+      <p><b>週末：</b>週六、日完全不排新進度，作為緩衝日，可用來補齊平日落後的部分、整理錯題本，或單純休息。</p>
+      <p><b>英文：</b>週一、四晚間 5 點後為英文課時段，本計畫完全不排課；平日進度依補習班安排即可，不額外占用平日讀書時段。</p>
+      <p><b>作文：</b>每週二下午 2–5 點為作文課，本計畫已將週二下午時段改排至 17:00–19:00。</p>
+      <p><b>歷史／地理：</b>因單元內容較彈性，兩科合併為同一「社會」時段一起進行，前半段看歷史、後半段看地理即可。</p>
+      <p><b>推薦頻道：</b>
+        <a href="https://www.youtube.com/@ogiwu" target="_blank" rel="noopener">宜蓉的歷史課</a>、
+        <a href="https://www.youtube.com/@knshgeo" target="_blank" rel="noopener">康軒國中社會地理頻道</a>、
+        國文主要使用出版社官方頻道 <a href="https://www.youtube.com/@HLJCH" target="_blank" rel="noopener">翰林國中國文</a>（逐課錄製，對應版本保證正確），第1課另附 <a href="https://www.junyiacademy.org" target="_blank" rel="noopener">均一教育平台</a> 練習題。
+      </p>
+      <p>打勾進度儲存在此瀏覽器裝置中，換裝置或清除瀏覽器資料會重置。</p>
+    </div>
+  </details>
+
+  <p class="footer-note">量力而為，落後不用焦慮 — 週六日全數留空，就是最大的緩衝。</p>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+<script>
+var firebaseConfig = {
+  apiKey: "AIzaSyBASa8wnO95xUuiH1W-qwgxGsbfTv9k9yk",
+  authDomain: "summer-plan-b2ad7.firebaseapp.com",
+  databaseURL: "https://summer-plan-b2ad7-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "summer-plan-b2ad7",
+  storageBucket: "summer-plan-b2ad7.firebasestorage.app",
+  messagingSenderId: "1091485246988",
+  appId: "1:1091485246988:web:ee1e24d0466b33b5363029"
+};
+var fbApp = null, fbRef = null;
+try{
+  fbApp = firebase.initializeApp(firebaseConfig);
+  fbRef = firebase.database().ref('summerPlan2026/done');
+}catch(e){ console.error('Firebase init failed', e); }
+
+var SUBJ = {
+  math:{label:'數學', color:'var(--math)', tint:'var(--math-t)'},
+  phys:{label:'理化', color:'var(--phys)', tint:'var(--phys-t)'},
+  social:{label:'社會', color:'var(--social)', tint:'var(--social-t)'},
+  chin:{label:'國文', color:'var(--chin)', tint:'var(--chin-t)'},
+  review:{label:'複習/緩衝', color:'var(--review)', tint:'var(--review-t)'}
+};
+
+var WEEKEND_NOTE = {t:'週末緩衝', s:'review', ti:'週末不排新進度', note:'可完全休息，也可用來補齊平日沒跟上的進度、整理錯題本，或提前預習下週內容'};
+
+var SCHEDULE = [
+{d:'2026-07-29', b:[
+  {t:'09:00–11:00', s:'math', ti:'數學 1-2｜多項式與其加減運算', note:'1-1乘法公式已完成，直接接續。基礎概念＋加減運算法則'},
+  {t:'14:00–16:00', s:'social', ti:'社會｜歷史第1課 商周至隋唐的國家與社會＋地理第1課 中國的自然環境', note:'歷史為「宜蓉的歷史課」播放清單，地理為康軒官方地理頻道播放清單，兩者皆對應完整課次（各自還有數集可接續）', links:[{label:'歷史：從封建到郡縣', url:'https://www.youtube.com/watch?v=cYSyHDqq8a4&list=PL-oHJmlmfN2wQt8Tmjbt6-vtyTU88_WGb&index=1'},{label:'地理：中國的自然環境', url:'https://www.youtube.com/watch?v=fCZKHBUlZxM&list=PL_Hz3_-6p-ZsWgwcr161hogz0jvQh6i5D'}]}
+]},
+{d:'2026-07-30', b:[
+  {t:'09:00–11:00', s:'phys', ti:'理化 B3C2｜空氣＋歷屆會考解析', note:'影片約96分＋練習約48分，可分兩段進行', link:'https://youtu.be/ujNU9HoXCTo'},
+  {t:'14:00–16:00', s:'chin', ti:'國文｜8上 第1課〈田園之秋選〉陳冠學', note:'翰林版', links:[{label:'翰林官方逐課講解', url:'https://www.youtube.com/@HLJCH/search?query=田園之秋選'},{label:'均一教育平台練習', url:'https://www.junyiacademy.org/exercise/108Hmd-8a-01'}]}
+]},
+{d:'2026-07-31', b:[
+  {t:'09:00–11:00', s:'math', ti:'數學 1-2｜多項式加減運算的應用問題＋自修練習'},
+  {t:'14:00–16:00', s:'phys', ti:'理化 B3C3-1｜波的傳播', link:'https://youtu.be/JAxyGBJsLgk'}
+]},
+{d:'2026-08-01', b:[WEEKEND_NOTE]},
+{d:'2026-08-02', b:[WEEKEND_NOTE]},
+{d:'2026-08-03', b:[
+  {t:'09:00–11:00', s:'math', ti:'數學 1-3｜多項式的乘除運算＋應用問題'},
+  {t:'14:00–16:00', s:'phys', ti:'理化 B3C3-2,3｜聲音的傳播＋聲波反射與超聲波', link:'https://youtu.be/tkVgG1MTOq4'}
+]},
+{d:'2026-08-04', b:[
+  {t:'09:00–11:00', s:'phys', ti:'理化 B3C3-4＋歷屆｜多變的聲音＋歷屆會考解析', link:'https://youtu.be/TJ2VwVVt-Z8'},
+  {t:'17:00–19:00', s:'social', ti:'社會｜歷史第2課 商周至隋唐的民族與文化＋地理第2課 中國的人口', note:'今天下午2–5點作文課，已改排傍晚時段。歷史本課實際共4集（另有草原民族農業民族、文化交流之佛教、中國文化的對外傳播），時間夠可接續看完', links:[{label:'歷史：魏晉南北朝的民族融合', url:'https://www.youtube.com/watch?v=TKAVBxVyo_k&list=PL-oHJmlmfN2wQt8Tmjbt6-vtyTU88_WGb&index=4'},{label:'地理：中國的人口成長與文化遷移', url:'https://www.youtube.com/watch?v=t9fyBw5XGjE&list=PL_Hz3_-6p-Zv0qzwViLccZDwaqB3-aFh8'}]}
+]},
+{d:'2026-08-05', b:[
+  {t:'09:00–11:00', s:'math', ti:'數學 2-1｜平方根與近似值', note:'康軒8上第2章開始'},
+  {t:'14:00–16:00', s:'chin', ti:'國文｜8上 第2課〈古詩選〉', link:'https://www.youtube.com/@HLJCH/search?query=古詩選', note:'翰林國中國文官方頻道'}
+]},
+{d:'2026-08-06', b:[
+  {t:'09:00–11:00', s:'phys', ti:'理化 B3C4-1,2｜光的直進＋光的反射與面鏡', link:'https://youtu.be/jvIys5anwVE'},
+  {t:'14:00–16:00', s:'chin', ti:'國文｜8上 第3課〈下雨天，真好〉琦君', link:'https://www.youtube.com/@HLJCH/search?query=下雨天真好', note:'翰林國中國文官方頻道'}
+]},
+{d:'2026-08-07', b:[
+  {t:'09:00–11:00', s:'math', ti:'數學 2-2｜根式的運算', note:'乘法、最簡根式、除法、加減運算、四則運算、有理化分母'},
+  {t:'14:00–16:00', s:'phys', ti:'理化 B3C4-3｜光的折射原理', link:'https://youtu.be/8hC094znZxM'}
+]},
+{d:'2026-08-08', b:[WEEKEND_NOTE]},
+{d:'2026-08-09', b:[WEEKEND_NOTE]},
+{d:'2026-08-10', b:[
+  {t:'09:00–11:00', s:'math', ti:'數學 2-2｜根式運算應用問題＋自修練習'},
+  {t:'14:00–16:00', s:'phys', ti:'理化 B3C4-4｜透鏡的折射', link:'https://youtu.be/KgBH4eGxY4Y'}
+]},
+{d:'2026-08-11', b:[
+  {t:'09:00–11:00', s:'phys', ti:'理化 B3C4-5,6｜光學儀器＋色光與顏色', link:'https://youtu.be/fEZlpWsyZSo'},
+  {t:'17:00–19:00', s:'social', ti:'社會｜歷史第3課 宋元時期的國際互動＋地理第3課 中國的產業與經濟', note:'今天下午作文課，已改排傍晚時段。歷史本課實際共5集（另有靖康之禍、蒙古帝國、宋元貿易與城市生活、宋元學術科技），時間夠可接續看完', links:[{label:'歷史：宋遼的互動／澶淵之盟', url:'https://www.youtube.com/watch?v=cQdzYd_RW3w&list=PL-oHJmlmfN2wQt8Tmjbt6-vtyTU88_WGb&index=7'},{label:'地理：中國的產業發展與地區差異', url:'https://www.youtube.com/watch?v=tGx6ibBpGvc&list=PL_Hz3_-6p-Zt0bwu52S1tBJ2OVT5qL_sX'}]}
+]},
+{d:'2026-08-12', b:[
+  {t:'09:00–11:00', s:'math', ti:'數學 2-3｜畢氏定理與平面距離'},
+  {t:'14:00–16:00', s:'social', ti:'社會｜歷史第4課 明清帝國與天朝體制＋地理第4課 東北亞的自然環境與文化', note:'歷史本課實際共6集（另有明朝建立與滅亡、大清帝國的統治、鄭和下西洋、明清貿易活動、東西文化交流），時間夠可接續看完', links:[{label:'歷史：天朝體制與朝貢貿易', url:'https://www.youtube.com/watch?v=d1lHjbmWFJA&list=PL-oHJmlmfN2wQt8Tmjbt6-vtyTU88_WGb&index=14'},{label:'地理：東北亞的自然環境', url:'https://www.youtube.com/watch?v=tEtAHSCD7kg&list=PL_Hz3_-6p-ZsVBrzYcrPmjvo7igPyWB2Y'}]}
+]},
+{d:'2026-08-13', b:[
+  {t:'09:00–11:00', s:'phys', ti:'理化 B3C4歷屆＋B3C5-1｜歷屆會考解析＋溫度與溫度計', link:'https://youtu.be/5Ri-y0-ASIA'},
+  {t:'14:00–16:00', s:'chin', ti:'國文｜8上 第4課〈愛蓮說〉周敦頤', link:'https://www.youtube.com/@HLJCH/search?query=愛蓮說', note:'翰林國中國文官方頻道'}
+]},
+{d:'2026-08-14', b:[
+  {t:'09:00–11:00', s:'math', ti:'數學 3-1｜因式分解：提公因式與乘法公式'},
+  {t:'14:00–16:00', s:'phys', ti:'理化 B3C5-2｜熱量與比熱', note:'內容較多（約2.1小時），可分段進行', link:'https://youtu.be/Nb9n2PExZQk'}
+]},
+{d:'2026-08-15', b:[WEEKEND_NOTE]},
+{d:'2026-08-16', b:[WEEKEND_NOTE]},
+{d:'2026-08-17', b:[
+  {t:'09:00–11:00', s:'math', ti:'數學 3-2｜因式分解：十字交乘法'},
+  {t:'14:00–16:00', s:'phys', ti:'理化 B3C5-3｜熱的傳播方式', link:'https://youtu.be/uRQP2sh2drc'}
+]},
+{d:'2026-08-18', b:[
+  {t:'09:00–11:00', s:'phys', ti:'理化 B3C5-4｜熱對物質的影響', link:'https://youtu.be/UfDhzKoG4x8'},
+  {t:'17:00–19:00', s:'social', ti:'社會｜歷史第5課 西力衝擊下的晚清變革＋地理第5課 東北亞的經濟發展', note:'今天下午作文課，已改排傍晚時段。歷史本課實際共8集（另有中西貿易衝突、英法聯軍、自強運動、甲午戰爭、戊戌變法、義和團、立憲運動），時間夠可接續看完', links:[{label:'歷史：鴉片戰爭與南京條約', url:'https://www.youtube.com/watch?v=z51WD1zjDHw&list=PL-oHJmlmfN2wQt8Tmjbt6-vtyTU88_WGb&index=19'},{label:'地理：東北亞的經濟發展', url:'https://www.youtube.com/watch?v=0Olq8qV-v3M&list=PL_Hz3_-6p-ZsG6PU_tGIS1JCK8qTpcLEn'}]}
+]},
+{d:'2026-08-19', b:[
+  {t:'09:00–11:00', s:'math', ti:'數學 4-1｜一元二次方程式：因式分解法解題'},
+  {t:'14:00–16:00', s:'chin', ti:'國文｜語文常識／成語專題複習', link:'https://www.youtube.com/@HLJCH/search?query=成語', note:'翰林國中國文官方頻道'}
+]},
+{d:'2026-08-20', b:[
+  {t:'09:00–11:00', s:'phys', ti:'理化 B3C5歷屆｜歷屆會考解析', link:'https://youtu.be/dayK2dDjm_I'},
+  {t:'14:00–16:00', s:'chin', ti:'國文｜8上第1–4課 期初小測驗＋錯題整理'}
+]},
+{d:'2026-08-21', b:[
+  {t:'09:00–11:00', s:'math', ti:'數學 4-2｜一元二次方程式：配方法與公式解'},
+  {t:'14:00–16:00', s:'phys', ti:'理化 B3C6-1,2｜元素與化合物＋認識元素', link:'https://youtu.be/cmhBEsOYugM'}
+]},
+{d:'2026-08-22', b:[WEEKEND_NOTE]},
+{d:'2026-08-23', b:[WEEKEND_NOTE]},
+{d:'2026-08-24', b:[
+  {t:'09:00–11:00', s:'math', ti:'數學 4-3｜一元二次方程式：應用問題'},
+  {t:'14:00–16:00', s:'phys', ti:'理化 B3C6-3,4｜元素週期表＋原子的結構', link:'https://youtu.be/X74vRI3w_bM'}
+]},
+{d:'2026-08-25', b:[
+  {t:'09:00–11:00', s:'phys', ti:'理化 B3C6-5,6｜分子與化學式＋物質變化的粒子觀點', link:'https://youtu.be/GUKi_Gwec5w'},
+  {t:'17:00–19:00', s:'social', ti:'社會｜歷史第6課 晚清的社會文化變遷（歷史單元總複習）＋地理第6課 東北亞的區域發展與挑戰', note:'今天下午作文課，已改排傍晚時段。地理這課康軒官方頻道查無獨立播放清單，暫連到「東北亞的經濟發展」清單接續看，或請對照課本確認是否已包含在其他課次內', links:[{label:'歷史：晚清社會文化的變遷', url:'https://www.youtube.com/watch?v=Y4BWxSe7mx4&list=PL-oHJmlmfN2wQt8Tmjbt6-vtyTU88_WGb&index=26'},{label:'地理：東北亞的經濟發展（延伸）', url:'https://www.youtube.com/watch?v=0Olq8qV-v3M&list=PL_Hz3_-6p-ZsG6PU_tGIS1JCK8qTpcLEn'}]}
+]},
+{d:'2026-08-26', b:[
+  {t:'09:00–11:00', s:'math', ti:'數學 5-1｜統計資料處理：累積次數分配與相對次數分析'},
+  {t:'14:00–16:00', s:'review', ti:'彈性加碼｜自選較弱科目加強複習', note:'例如理化或數學尚未熟練的單元，也可以提前休息'}
+]},
+{d:'2026-08-27', b:[
+  {t:'09:00–11:00', s:'phys', ti:'理化 B3C6歷屆｜歷屆會考解析（理化預習全部完成🎉）', link:'https://youtu.be/H1sF3TWaMRw'},
+  {t:'14:00–16:00', s:'chin', ti:'國文｜全冊重點總整理', link:'https://www.youtube.com/@HLJCH/videos', note:'翰林國中國文官方頻道，瀏覽本學期全部課次影片'}
+]},
+{d:'2026-08-28', b:[
+  {t:'09:00–11:00', s:'math', ti:'數學 5-1｜統計資料處理：應用練習＋自修全冊最終確認'},
+  {t:'14:00–16:00', s:'phys', ti:'理化｜B3C2–C6 全範圍總複習測驗'}
+]},
+{d:'2026-08-29', b:[WEEKEND_NOTE]},
+{d:'2026-08-30', b:[
+  {t:'全天彈性', s:'review', ti:'開學前一天：整理文具課本、早睡收心，不排新進度'}
+]}
+];
+
+var STORE_KEY = 'summerPlan2026_progress';
+var state = { done: {} };
+try{
+  var raw = localStorage.getItem(STORE_KEY);
+  if(raw) state = JSON.parse(raw);
+}catch(e){}
+if(!state.done) state.done = {};
+
+function save(){
+  try{ localStorage.setItem(STORE_KEY, JSON.stringify(state)); }catch(e){}
+}
+function taskId(dateStr, idx){ return dateStr + '_' + idx; }
+
+function setSyncStatus(text, on){
+  var dot = document.getElementById('syncDot'), txt = document.getElementById('syncText');
+  if(dot) dot.className = 'sync-dot' + (on ? ' on' : '');
+  if(txt) txt.textContent = text;
+}
+
+function refreshAllViews(){
+  renderProgress();
+  renderStrip();
+  if(document.getElementById('viewAll').style.display !== 'none'){
+    renderAll();
+  } else {
+    renderDayCard();
+  }
+}
+
+if(fbRef){
+  fbRef.on('value', function(snapshot){
+    state.done = snapshot.val() || {};
+    save();
+    setSyncStatus('已同步（爸媽和你看到的是同一份進度）', true);
+    refreshAllViews();
+  }, function(err){
+    console.error('Firebase sync error', err);
+    setSyncStatus('同步失敗，暫時只存在這台裝置', false);
+  });
+} else {
+  setSyncStatus('未連線雲端，僅存在這台裝置', false);
+}
+
+function fmtDate(iso){
+  var p = iso.split('-');
+  return { m: parseInt(p[1],10), d: parseInt(p[2],10) };
+}
+var DOW = ['週日','週一','週二','週三','週四','週五','週六'];
+function dowOf(iso){
+  var dt = new Date(iso + 'T00:00:00');
+  return DOW[dt.getDay()];
+}
+function todayISO(){
+  var dt = new Date();
+  var y = dt.getFullYear(), m = String(dt.getMonth()+1).padStart(2,'0'), d = String(dt.getDate()).padStart(2,'0');
+  return y + '-' + m + '-' + d;
+}
+
+var minISO = SCHEDULE[0].d, maxISO = SCHEDULE[SCHEDULE.length-1].d;
+function clampISO(iso){
+  if(iso < minISO) return minISO;
+  if(iso > maxISO) return maxISO;
+  return iso;
+}
+var todayReal = todayISO();
+var selected = clampISO(todayReal);
+
+function dayIndex(iso){
+  for(var i=0;i<SCHEDULE.length;i++) if(SCHEDULE[i].d === iso) return i;
+  return 0;
+}
+
+function totalTasks(){ var n=0; SCHEDULE.forEach(function(day){ n+=day.b.length; }); return n; }
+function doneTasks(){ var n=0; Object.keys(state.done).forEach(function(k){ if(state.done[k]) n++; }); return n; }
+
+function renderProgress(){
+  var total = totalTasks(), done = doneTasks();
+  var pct = total ? Math.round(done/total*100) : 0;
+  document.getElementById('pPct').textContent = pct + '%';
+  document.getElementById('pCount').textContent = done + ' / ' + total + ' 個學習時段';
+  document.getElementById('pBar').style.width = pct + '%';
+
+  var bySubj = {};
+  SCHEDULE.forEach(function(day){
+    day.b.forEach(function(blk, idx){
+      var key = blk.s;
+      bySubj[key] = bySubj[key] || {done:0,total:0};
+      bySubj[key].total++;
+      if(state.done[taskId(day.d, idx)]) bySubj[key].done++;
+    });
+  });
+  var chipsHost = document.getElementById('pChips');
+  chipsHost.innerHTML = '';
+  Object.keys(bySubj).forEach(function(key){
+    var meta = SUBJ[key];
+    var c = bySubj[key];
+    var el = document.createElement('span');
+    el.className = 'chip';
+    el.style.background = meta.tint;
+    el.style.color = meta.color;
+    el.innerHTML = '<i style="background:'+meta.color+'"></i>' + meta.label + ' ' + c.done + '/' + c.total;
+    chipsHost.appendChild(el);
+  });
+}
+
+function dayCompletion(day, idx){
+  var t = day.b.length, dn = 0;
+  day.b.forEach(function(blk, i){ if(state.done[taskId(day.d, i)]) dn++; });
+  return dn === t;
+}
+
+function renderStrip(){
+  var host = document.getElementById('strip');
+  host.innerHTML = '';
+  SCHEDULE.forEach(function(day){
+    var f = fmtDate(day.d);
+    var btn = document.createElement('button');
+    btn.className = 'daychip' + (day.d===selected?' selected':'') + (day.d===todayReal?' istoday':'') + (dayCompletion(day)?' done':'');
+    btn.innerHTML = '<div class="dow">'+dowOf(day.d).slice(1)+'</div><div class="num">'+f.m+'/'+f.d+'</div><div class="dot"></div>';
+    btn.onclick = function(){ selected = day.d; renderStrip(); renderDayCard(); };
+    host.appendChild(btn);
+  });
+}
+
+function toggleTask(dateStr, idx){
+  var id = taskId(dateStr, idx);
+  var newVal = !state.done[id];
+  state.done[id] = newVal;
+  save();
+  if(fbRef){
+    fbRef.child(id).set(newVal).catch(function(err){
+      console.error('Firebase write failed', err);
+      setSyncStatus('同步失敗，暫時只存在這台裝置', false);
+    });
+  }
+  renderProgress();
+  renderStrip();
+  if(document.getElementById('viewAll').style.display !== 'none'){
+    renderAll();
+  } else {
+    renderDayCard();
+  }
+}
+
+function blockRow(day, blk, idx){
+  var meta = SUBJ[blk.s];
+  var id = taskId(day.d, idx);
+  var checked = !!state.done[id];
+  var row = document.createElement('div');
+  row.className = 'block' + (checked?' checked':'');
+  var linkHtml = '';
+  if(blk.links && blk.links.length){
+    linkHtml = '<div class="link-row">' + blk.links.map(function(l){
+      return '<a class="block-link" href="'+l.url+'" target="_blank" rel="noopener">▶ '+l.label+'</a>';
+    }).join('') + '</div>';
+  } else if(blk.link){
+    linkHtml = '<a class="block-link" href="'+blk.link+'" target="_blank" rel="noopener">▶ 開啟課程連結</a>';
+  }
+  var noteHtml = blk.note ? '<div class="block-note">'+blk.note+'</div>' : '';
+  row.innerHTML =
+    '<input type="checkbox" class="cb" '+(checked?'checked':'')+' aria-label="標記完成：'+blk.ti+'">'+
+    '<div class="block-main">'+
+      '<div class="block-top">'+
+        '<span class="time">'+blk.t+'</span>'+
+        '<span class="subj" style="background:'+meta.tint+';color:'+meta.color+'">'+meta.label+'</span>'+
+      '</div>'+
+      '<div class="block-title">'+blk.ti+'</div>'+
+      noteHtml + linkHtml +
+    '</div>';
+  row.querySelector('.cb').onchange = function(){ toggleTask(day.d, idx); };
+  return row;
+}
+
+function renderDayCard(){
+  var host = document.getElementById('dayCardHost');
+  host.innerHTML = '';
+  var day = SCHEDULE[dayIndex(selected)];
+  var f = fmtDate(day.d);
+  var card = document.createElement('div');
+  card.className = 'daycard' + (day.d===todayReal?' istoday':'');
+  var head = document.createElement('div');
+  head.className = 'daycard-head';
+  head.innerHTML =
+    '<div class="num">'+f.m+'/'+f.d+'</div>'+
+    '<div class="meta"><b>'+dowOf(day.d)+'</b><small>第 '+(dayIndex(day.d)+1)+' / '+SCHEDULE.length+' 天</small></div>'+
+    (day.d===todayReal ? '<span class="todaymark">今天</span>' : '');
+  card.appendChild(head);
+  day.b.forEach(function(blk, idx){ card.appendChild(blockRow(day, blk, idx)); });
+  host.appendChild(card);
+}
+
+function weekLabel(iso){
+  var idx = dayIndex(iso);
+  return '第 ' + (Math.floor((idx + 2) / 7) + 1) + ' 週';
+}
+
+function renderAll(){
+  var host = document.getElementById('viewAll');
+  host.innerHTML = '';
+  var lastWeek = null;
+  SCHEDULE.forEach(function(day){
+    var wk = weekLabel(day.d);
+    if(wk !== lastWeek){
+      var h = document.createElement('div');
+      h.className = 'week-head';
+      h.textContent = wk;
+      host.appendChild(h);
+      lastWeek = wk;
+    }
+    var f = fmtDate(day.d);
+    var card = document.createElement('div');
+    card.className = 'daycard' + (day.d===todayReal?' istoday':'');
+    var head = document.createElement('div');
+    head.className = 'daycard-head';
+    head.innerHTML =
+      '<div class="num">'+f.m+'/'+f.d+'</div>'+
+      '<div class="meta"><b>'+dowOf(day.d)+'</b></div>'+
+      (day.d===todayReal ? '<span class="todaymark">今天</span>' : '');
+    card.appendChild(head);
+    day.b.forEach(function(blk, idx){ card.appendChild(blockRow(day, blk, idx)); });
+    host.appendChild(card);
+  });
+}
+
+function shiftDay(n){
+  var idx = dayIndex(selected) + n;
+  if(idx < 0) idx = 0;
+  if(idx > SCHEDULE.length-1) idx = SCHEDULE.length-1;
+  selected = SCHEDULE[idx].d;
+  renderStrip();
+  renderDayCard();
+  var chip = document.querySelectorAll('.daychip')[idx];
+  if(chip) chip.scrollIntoView({behavior:'smooth', inline:'center', block:'nearest'});
+}
+function goToday(){
+  selected = clampISO(todayReal);
+  renderStrip();
+  renderDayCard();
+  var idx = dayIndex(selected);
+  var chip = document.querySelectorAll('.daychip')[idx];
+  if(chip) chip.scrollIntoView({behavior:'smooth', inline:'center', block:'nearest'});
+}
+
+function setView(v){
+  document.getElementById('tabToday').classList.toggle('active', v==='today');
+  document.getElementById('tabAll').classList.toggle('active', v==='all');
+  document.getElementById('viewToday').style.display = v==='today' ? '' : 'none';
+  document.getElementById('viewAll').style.display = v==='all' ? '' : 'none';
+  if(v==='all') renderAll();
+}
+
+renderProgress();
+renderStrip();
+renderDayCard();
+setTimeout(goToday, 30);
+</script>
+</body>
+</html>
