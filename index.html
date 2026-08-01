@@ -17,6 +17,7 @@
     --chin:#C23B5E; --chin-t:#F8E3E9;
     --eng:#6B5CA5;  --eng-t:#ECE7F5;
     --civ:#5B4FBF; --civ-t:#E9E6F9;
+    --custom:#3F7A87; --custom-t:#DCEDF1;
     --review:#8A8578; --review-t:#EFEDE6;
   }
   @media (prefers-color-scheme: dark){
@@ -32,6 +33,7 @@
       --chin:#EF87A2; --chin-t:rgba(194,59,94,.18);
       --eng:#B0A0DE;  --eng-t:rgba(107,92,165,.20);
       --civ:#9C90E8; --civ-t:rgba(91,79,191,.20);
+      --custom:#77BCCB; --custom-t:rgba(63,122,135,.22);
       --review:#B7B2A4; --review-t:rgba(138,133,120,.20);
     }
   }
@@ -47,6 +49,7 @@
     --chin:#EF87A2; --chin-t:rgba(194,59,94,.18);
     --eng:#B0A0DE;  --eng-t:rgba(107,92,165,.20);
     --civ:#9C90E8; --civ-t:rgba(91,79,191,.20);
+    --custom:#77BCCB; --custom-t:rgba(63,122,135,.22);
     --review:#B7B2A4; --review-t:rgba(138,133,120,.20);
   }
   :root[data-theme="light"]{
@@ -61,6 +64,7 @@
     --chin:#C23B5E; --chin-t:#F8E3E9;
     --eng:#6B5CA5;  --eng-t:#ECE7F5;
     --civ:#5B4FBF; --civ-t:#E9E6F9;
+    --custom:#3F7A87; --custom-t:#DCEDF1;
     --review:#8A8578; --review-t:#EFEDE6;
   }
 
@@ -160,6 +164,40 @@
   }
   .link-row .block-link:hover{text-decoration:none; filter:brightness(.94);}
 
+  .del-btn{
+    margin-left:8px; background:transparent; border:none; color:var(--ink-soft);
+    font-size:17px; line-height:1; cursor:pointer; padding:0 2px; font-family:inherit; align-self:flex-start;
+  }
+  .del-btn:hover{color:#d9534f;}
+  .del-btn:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:4px;}
+
+  .add-zone{padding:12px 18px; border-top:1px dashed var(--border); background:var(--surface-2);}
+  .add-btn{
+    width:100%; border:1px dashed var(--border); background:transparent; color:var(--ink-soft);
+    border-radius:10px; padding:9px 12px; font-size:12.5px; font-weight:600; cursor:pointer; font-family:inherit;
+  }
+  .add-btn:hover{border-color:var(--accent); color:var(--accent);}
+  .add-btn:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+  .add-form{display:none; flex-direction:column; gap:8px;}
+  .add-form.open{display:flex;}
+  .add-form input{
+    width:100%; border:1px solid var(--border); background:var(--surface); color:var(--ink);
+    border-radius:9px; padding:9px 11px; font-size:13px; font-family:inherit;
+  }
+  .add-form input:focus-visible{outline:2px solid var(--accent); outline-offset:1px;}
+  .add-grid{display:flex; gap:8px; flex-wrap:wrap;}
+  .add-grid input{flex:1 1 130px; min-width:0;}
+  .add-actions{display:flex; gap:8px;}
+  .btn-save{
+    background:var(--accent); color:#fff; border:none; border-radius:9px;
+    padding:9px 16px; font-size:12.5px; font-weight:700; cursor:pointer; font-family:inherit;
+  }
+  .btn-cancel{
+    background:transparent; color:var(--ink-soft); border:1px solid var(--border); border-radius:9px;
+    padding:9px 16px; font-size:12.5px; font-weight:600; cursor:pointer; font-family:inherit;
+  }
+  .btn-save:focus-visible, .btn-cancel:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+
   .week-head{font-size:12px; font-weight:700; color:var(--ink-soft); letter-spacing:.06em; margin:22px 0 8px; text-transform:uppercase;}
   .week-head:first-child{margin-top:0;}
 
@@ -230,6 +268,7 @@
         <a href="https://www.youtube.com/channel/UCwdllSTkPRnKyWyCZ54bpkA" target="_blank" rel="noopener">翻轉地理教室</a>、
         國文主要使用出版社官方頻道 <a href="https://www.youtube.com/@HLJCH" target="_blank" rel="noopener">翰林國中國文</a>（逐課錄製，對應版本保證正確），第1課另附 <a href="https://www.junyiacademy.org" target="_blank" rel="noopener">均一教育平台</a> 練習題；公民主要使用 <a href="https://www.youtube.com/@gongmingding" target="_blank" rel="noopener">公民叮：教學影片分享平台</a>，第2課另用 <a href="https://www.youtube.com/@knshciv" target="_blank" rel="noopener">康軒國中社會公民頻道</a>。
       </p>
+      <p><b>自行新增項目：</b>每一天的最下方都有「＋ 新增項目」，可自己填時間（可留空）、科目、進度內容，例如英文補習班的作業。新增後的項目一樣可以打勾、也會計入上方的完成進度，右側「×」可刪除。新增與打勾都會同步到雲端，兩邊裝置都看得到。</p>
       <p>打勾進度已同步至雲端資料庫，家長與小孩用各自裝置打開同一網址即可看到同一份進度。</p>
     </div>
   </details>
@@ -249,10 +288,11 @@ var firebaseConfig = {
   messagingSenderId: "1091485246988",
   appId: "1:1091485246988:web:ee1e24d0466b33b5363029"
 };
-var fbApp = null, fbRef = null;
+var fbApp = null, fbRef = null, fbCustomRef = null;
 try{
   fbApp = firebase.initializeApp(firebaseConfig);
   fbRef = firebase.database().ref('summerPlan2026/done');
+  fbCustomRef = firebase.database().ref('summerPlan2026/custom');
 }catch(e){ console.error('Firebase init failed', e); }
 
 var SUBJ = {
@@ -393,11 +433,60 @@ try{
   if(raw) state = JSON.parse(raw);
 }catch(e){}
 if(!state.done) state.done = {};
+if(!state.custom) state.custom = {};
 
 function save(){
   try{ localStorage.setItem(STORE_KEY, JSON.stringify(state)); }catch(e){}
 }
 function taskId(dateStr, idx){ return dateStr + '_' + idx; }
+function customTaskId(id){ return 'cst_' + id; }
+
+// 取出某天的自訂項目，依建立時間排序
+function customItems(dateStr){
+  var o = (state.custom && state.custom[dateStr]) || {};
+  return Object.keys(o).filter(function(k){ return o[k]; }).sort().map(function(id){
+    var it = o[id];
+    return { id:id, t:it.t || '自訂時段', subj:it.subj || '自訂', ti:it.ti || '' };
+  });
+}
+
+function addCustom(dateStr, t, subj, ti){
+  var id = 'c' + Date.now().toString(36) + Math.floor(Math.random()*10000);
+  var item = { t: t || '自訂時段', subj: subj || '自訂', ti: ti };
+  if(!state.custom[dateStr]) state.custom[dateStr] = {};
+  state.custom[dateStr][id] = item;
+  save();
+  if(fbCustomRef){
+    fbCustomRef.child(dateStr).child(id).set(item).catch(function(err){
+      console.error('Firebase custom write failed', err);
+      setSyncStatus('同步失敗，暫時只存在這台裝置', false);
+    });
+  }
+  refreshAllViews();
+}
+
+function removeCustom(dateStr, id){
+  if(state.custom[dateStr]) delete state.custom[dateStr][id];
+  delete state.done[customTaskId(id)];
+  save();
+  if(fbCustomRef) fbCustomRef.child(dateStr).child(id).remove();
+  if(fbRef) fbRef.child(customTaskId(id)).remove();
+  refreshAllViews();
+}
+
+function toggleCustomTask(id){
+  var key = customTaskId(id);
+  var newVal = !state.done[key];
+  state.done[key] = newVal;
+  save();
+  if(fbRef){
+    fbRef.child(key).set(newVal).catch(function(err){
+      console.error('Firebase write failed', err);
+      setSyncStatus('同步失敗，暫時只存在這台裝置', false);
+    });
+  }
+  refreshAllViews();
+}
 
 function setSyncStatus(text, on){
   var dot = document.getElementById('syncDot'), txt = document.getElementById('syncText');
@@ -424,6 +513,13 @@ if(fbRef){
   }, function(err){
     console.error('Firebase sync error', err);
     setSyncStatus('同步失敗，暫時只存在這台裝置', false);
+  });
+  fbCustomRef.on('value', function(snapshot){
+    state.custom = snapshot.val() || {};
+    save();
+    refreshAllViews();
+  }, function(err){
+    console.error('Firebase custom sync error', err);
   });
 } else {
   setSyncStatus('未連線雲端，僅存在這台裝置', false);
@@ -458,8 +554,21 @@ function dayIndex(iso){
   return 0;
 }
 
-function totalTasks(){ var n=0; SCHEDULE.forEach(function(day){ n+=day.b.length; }); return n; }
-function doneTasks(){ var n=0; Object.keys(state.done).forEach(function(k){ if(state.done[k]) n++; }); return n; }
+// 列出所有任務ID（含自訂項目），避免已刪除的自訂項目仍被算進完成數
+function allTaskIds(){
+  var ids = [];
+  SCHEDULE.forEach(function(day){
+    day.b.forEach(function(blk, idx){ ids.push(taskId(day.d, idx)); });
+    customItems(day.d).forEach(function(it){ ids.push(customTaskId(it.id)); });
+  });
+  return ids;
+}
+function totalTasks(){ return allTaskIds().length; }
+function doneTasks(){
+  var n = 0;
+  allTaskIds().forEach(function(id){ if(state.done[id]) n++; });
+  return n;
+}
 
 function renderProgress(){
   var total = totalTasks(), done = doneTasks();
@@ -476,11 +585,16 @@ function renderProgress(){
       bySubj[key].total++;
       if(state.done[taskId(day.d, idx)]) bySubj[key].done++;
     });
+    customItems(day.d).forEach(function(it){
+      bySubj.custom = bySubj.custom || {done:0,total:0};
+      bySubj.custom.total++;
+      if(state.done[customTaskId(it.id)]) bySubj.custom.done++;
+    });
   });
   var chipsHost = document.getElementById('pChips');
   chipsHost.innerHTML = '';
   Object.keys(bySubj).forEach(function(key){
-    var meta = SUBJ[key];
+    var meta = SUBJ[key] || {label:'自訂', color:'var(--custom)', tint:'var(--custom-t)'};
     var c = bySubj[key];
     var el = document.createElement('span');
     el.className = 'chip';
@@ -492,9 +606,11 @@ function renderProgress(){
 }
 
 function dayCompletion(day, idx){
-  var t = day.b.length, dn = 0;
+  var cust = customItems(day.d);
+  var t = day.b.length + cust.length, dn = 0;
   day.b.forEach(function(blk, i){ if(state.done[taskId(day.d, i)]) dn++; });
-  return dn === t;
+  cust.forEach(function(it){ if(state.done[customTaskId(it.id)]) dn++; });
+  return t > 0 && dn === t;
 }
 
 function renderStrip(){
@@ -559,6 +675,73 @@ function blockRow(day, blk, idx){
   return row;
 }
 
+function escapeHtml(s){
+  return String(s == null ? '' : s).replace(/[&<>"']/g, function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+  });
+}
+
+// 自訂項目：外觀與課表項目一致，多一個刪除鈕
+function customRow(dateStr, item){
+  var id = customTaskId(item.id);
+  var checked = !!state.done[id];
+  var row = document.createElement('div');
+  row.className = 'block' + (checked ? ' checked' : '');
+  row.innerHTML =
+    '<input type="checkbox" class="cb" ' + (checked ? 'checked' : '') + ' aria-label="標記完成：' + escapeHtml(item.ti) + '">' +
+    '<div class="block-main">' +
+      '<div class="block-top">' +
+        '<span class="time">' + escapeHtml(item.t) + '</span>' +
+        '<span class="subj" style="background:var(--custom-t);color:var(--custom)">' + escapeHtml(item.subj) + '</span>' +
+      '</div>' +
+      '<div class="block-title">' + escapeHtml(item.ti) + '</div>' +
+    '</div>' +
+    '<button class="del-btn" title="刪除這個項目" aria-label="刪除項目：' + escapeHtml(item.ti) + '">×</button>';
+  row.querySelector('.cb').onchange = function(){ toggleCustomTask(item.id); };
+  row.querySelector('.del-btn').onclick = function(){
+    if(confirm('確定要刪除「' + item.ti + '」嗎？')) removeCustom(dateStr, item.id);
+  };
+  return row;
+}
+
+// 每張日卡底部的「新增項目」區塊
+function addZone(dateStr){
+  var zone = document.createElement('div');
+  zone.className = 'add-zone';
+  zone.innerHTML =
+    '<button class="add-btn" type="button">＋ 新增項目</button>' +
+    '<div class="add-form">' +
+      '<div class="add-grid">' +
+        '<input class="f-time" type="text" placeholder="時間（可留空，例如 20:00–21:00）">' +
+        '<input class="f-subj" type="text" placeholder="科目（例如 英文）">' +
+      '</div>' +
+      '<input class="f-ti" type="text" placeholder="進度內容（例如 補習班講義 Unit 3）">' +
+      '<div class="add-actions">' +
+        '<button class="btn-save" type="button">儲存</button>' +
+        '<button class="btn-cancel" type="button">取消</button>' +
+      '</div>' +
+    '</div>';
+
+  var btn = zone.querySelector('.add-btn');
+  var form = zone.querySelector('.add-form');
+  var fTime = zone.querySelector('.f-time');
+  var fSubj = zone.querySelector('.f-subj');
+  var fTi = zone.querySelector('.f-ti');
+
+  function close(){ form.classList.remove('open'); btn.style.display = ''; fTime.value = fSubj.value = fTi.value = ''; }
+
+  btn.onclick = function(){ form.classList.add('open'); btn.style.display = 'none'; fSubj.focus(); };
+  zone.querySelector('.btn-cancel').onclick = close;
+  zone.querySelector('.btn-save').onclick = function(){
+    var ti = fTi.value.trim();
+    if(!ti){ fTi.focus(); return; }
+    addCustom(dateStr, fTime.value.trim(), fSubj.value.trim(), ti);
+  };
+  fTi.onkeydown = function(e){ if(e.key === 'Enter') zone.querySelector('.btn-save').click(); };
+
+  return zone;
+}
+
 function renderDayCard(){
   var host = document.getElementById('dayCardHost');
   host.innerHTML = '';
@@ -574,6 +757,8 @@ function renderDayCard(){
     (day.d===todayReal ? '<span class="todaymark">今天</span>' : '');
   card.appendChild(head);
   day.b.forEach(function(blk, idx){ card.appendChild(blockRow(day, blk, idx)); });
+  customItems(day.d).forEach(function(it){ card.appendChild(customRow(day.d, it)); });
+  card.appendChild(addZone(day.d));
   host.appendChild(card);
 }
 
@@ -606,6 +791,8 @@ function renderAll(){
       (day.d===todayReal ? '<span class="todaymark">今天</span>' : '');
     card.appendChild(head);
     day.b.forEach(function(blk, idx){ card.appendChild(blockRow(day, blk, idx)); });
+    customItems(day.d).forEach(function(it){ card.appendChild(customRow(day.d, it)); });
+    card.appendChild(addZone(day.d));
     host.appendChild(card);
   });
 }
